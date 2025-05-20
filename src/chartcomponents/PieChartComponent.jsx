@@ -1,29 +1,35 @@
 import React from "react";
 import { PieChart, Pie, Cell, Tooltip } from "recharts";
 
-const data = [
-  { name: "In Transit", value: 400 },
-  { name: "Delivered", value: 300 },
-  { name: "Processing", value: 200 },
-  { name: "Delayed", value: 100 },
+const COLORS = [
+  "#FFBB28",
+  "#FF5A5F",
+  "#0088FE",
+  "#00C49F",
+  "#FFB6B9",
+  "#FAE3D9",
+  "#BBDED6",
+  "#8AC6D1",
+  "#D5AAFF",
+  "#FFC785",
 ];
 
-const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF5A5F"];
+function PieChartComponent({
+  data,
+  heading = "Cost Breakdown",
+  dateRange = "June 1 - June 30, 2023",
+}) {
+  const LABELS = data.map((item, index) => ({
+    name: item.name,
+    color: COLORS[index % COLORS.length],
+  }));
 
-const LABELS = [
-  { name: "Delivered", color: "#00C49F" },
-  { name: "In Transit", color: "#0088FE" },
-  { name: "Delayed", color: "#FF5A5F" },
-  { name: "Processing", color: "#FFBB28" },
-];
-
-function PieChartComponent() {
   return (
-    <div className="border border-amber-100 bg-amber-50 h-[400px] rounded-lg shadow-lg pt-6 h-[600] px-6 pb-4 hover:shadow-2xl transition-shadow duration-300 overflow-hidden mx-auto w-fit">
+    <div className="border border-amber-100 bg-amber-50 max-h-[380px] rounded-lg shadow-lg pt-6 px-6 pb-4 hover:shadow-2xl transition-shadow duration-300 overflow-hidden mx-auto w-fit">
       <div className="flex justify-between items-center mb-4">
-        <h3 className="text-lg font-semibold text-gray-700">Cost Breakdown</h3>
+        <h3 className="text-lg font-semibold text-gray-700">{heading}</h3>
         <span className="text-xs text-gray-500 border px-2 py-1 rounded">
-          June 1 - June 30, 2023
+          {dateRange}
         </span>
       </div>
 
@@ -46,7 +52,12 @@ function PieChartComponent() {
                 />
               ))}
             </Pie>
-            <Tooltip />
+            <Tooltip
+              formatter={(value, name, props) => [
+                `${value}`,
+                `${props.payload.name}`,
+              ]}
+            />
           </PieChart>
         </div>
 

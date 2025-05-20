@@ -15,7 +15,7 @@ import {
 const iconMap = {
   Dashboard: <FaTachometerAlt />,
   Vehicles: <FaTruck />,
-  "All Trailer": <FaCaravan />,
+  "All Trailers": <FaCaravan />,
   "Truck Expiries": <FaCalendarAlt />,
   "Truck Repair": <FaWrench />,
   "Annual Budget": <FaFileInvoiceDollar />,
@@ -38,11 +38,11 @@ const Sidebar = ({ isOpen }) => {
   const menuItems = [
     { name: "Dashboard", path: "/" },
     { name: "Vehicles", path: "/vehicles" },
-    { name: "All Trailer", path: "/trailer" },
+    { name: "All Trailers", path: "/trailer" },
     { name: "Truck Expiries", path: "/Expiry" },
     { name: "Truck Repair", path: "/Repair" },
-    { name: "Annual Budget", path: "/AnnualBudget" },
     { name: "Maintenance", path: "/maintenance" },
+    { name: "Annual Budget", path: "/AnnualBudget" },
     { name: "Fleet Profile", path: "/fleetProfile" },
   ];
 
@@ -62,7 +62,7 @@ const Sidebar = ({ isOpen }) => {
         {menuItems.map((item, index) => {
           const isActive = location.pathname === item.path;
           const baseClass =
-            "flex items-center px-6 py-3 text-xl  text-gray-300 border-l-4 transition-colors duration-200 cursor-pointer whitespace-nowrap overflow-hidden text-ellipsis";
+            "flex items-center px-6 py-3 text-sm  text-gray-300 border-l-4 transition-colors duration-200 cursor-pointer whitespace-nowrap overflow-hidden text-ellipsis";
           const activeClass = "bg-gray-800 text-white border-cyan-400";
           const inactiveClass =
             "bg-transparent border-gray-900 hover:bg-gray-800 hover:text-white hover:border-cyan-400";

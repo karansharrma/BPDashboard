@@ -1,17 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import { FaBars } from "react-icons/fa";
 import { FiRefreshCw } from "react-icons/fi";
+import { useGoogleSheet } from "../context/GoogleSheetContext"; // 👈 Import context hook
 
 const Navbar = ({ onToggleSidebar }) => {
-  const [isLoading, setIsLoading] = useState(false);
-
-  const handleLoadClick = () => {
-    setIsLoading(true);
-    // Simulate loading data - replace with your actual data loading function
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 2000);
-  };
+  const { isLoading, refresh } = useGoogleSheet(); // 👈 Use context data + refresh function
 
   return (
     <nav
@@ -50,7 +43,7 @@ const Navbar = ({ onToggleSidebar }) => {
 
       <div>
         <button
-          onClick={handleLoadClick}
+          onClick={refresh} // 👈 Call real fetch function
           style={{
             display: "flex",
             alignItems: "center",
@@ -58,7 +51,6 @@ const Navbar = ({ onToggleSidebar }) => {
             color: "white",
             padding: "0.5rem 1rem",
             borderRadius: "0.375rem",
-
             border: "none",
             fontSize: "1rem",
             fontWeight: "500",
@@ -81,15 +73,12 @@ const Navbar = ({ onToggleSidebar }) => {
   );
 };
 
+// Inject CSS animation
 const style = document.createElement("style");
 style.textContent = `
   @keyframes spin {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
   }
 `;
 document.head.appendChild(style);

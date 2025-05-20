@@ -44,7 +44,7 @@ function GaugeChart({
       options: {
         responsive: true,
         maintainAspectRatio: false,
-        cutout: "90%",
+        cutout: "94%",
         plugins: {
           legend: {
             display: false,
@@ -69,21 +69,21 @@ function GaugeChart({
   }, [progress, minValue, maxValue, progressPercentage, color]);
 
   return (
-    <div className="relative border border-amber-100 bg-amber-50 rounded-lg shadow-lg p-6 hover:shadow-2xl transition-shadow duration-300 overflow-hidden">
+    <div className="relative border border-amber-100 bg-amber-50 rounded-lg shadow-lg p-6 hover:shadow-2xl transition-shadow duration-300 overflow-hidden max-h-[400px]">
       <div className="flex items-start justify-start">
-        <h2 className="text-1xl font-medium text-gray-800">{title}</h2>
+        <h2 className="text-sm font-medium text-gray-800">{title}</h2>
       </div>
       <div className="flex items-center justify-center h-full">
         <div className="relative">
           <canvas id={canvasId.current} className="w-full h-full"></canvas>
           <div className="absolute inset-0 flex items-center justify-center mt-16">
-            <p className="text-4xl font-bold text-gray-800">
+            <p className="text-2xl font-bold text-gray-800">
               {progressPercentage}%
             </p>
           </div>
           <div className="absolute bottom-2 left-0 right-0 flex justify-between mt-0">
-            <h2 className="text-black text-2xl font-medium">0%</h2>
-            <h2 className="text-black text-2xl font-medium">100%</h2>
+            <h2 className="text-black text-1xl font-medium">0%</h2>
+            <h2 className="text-black text-1xl font-medium">100%</h2>
           </div>
         </div>
       </div>

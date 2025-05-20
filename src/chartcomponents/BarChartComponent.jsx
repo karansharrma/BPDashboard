@@ -13,8 +13,8 @@ import {
 } from "recharts";
 
 const dataKeyAvgDur = "Average Duration (in Hours)";
-const dataKeyTotalAvgDur = "Total Average Duration (in Hours)";
 const dataKeyNumTasks = "No. of Tasks";
+const dataKeyTotalAvgDur = "Total Average Duration (in Hours)";
 
 const chartData = [
   {
@@ -97,9 +97,9 @@ const chartData = [
   },
 ];
 
-const COLOR_AVG_DURATION = "#28a9a7"; // Teal for bars
-const COLOR_NUM_TASKS = "#000000"; // Black for the line
-const COLOR_TOTAL_AVG_DURATION = "#4338ca"; // Dark blue/indigo for dashes
+const COLOR_AVG_DURATION = "#28a9a7";
+const COLOR_NUM_TASKS = "#000000";
+const COLOR_TOTAL_AVG_DURATION = "#4338ca";
 
 const CustomDash = (props) => {
   const { cx, cy, fill } = props; // cx, cy are center of the symbol, fill is series color
@@ -149,9 +149,8 @@ function BarChartComponent() {
               dataKey="category"
               angle={-45}
               textAnchor="end"
-              interval={0} // Show all category labels
+              interval={0}
               tick={{ fontSize: 15, dy: 5 }} // Adjusted tick position
-              // height attribute is often managed by ResponsiveContainer context, margin is more reliable
             />
             <YAxis
               label={{
