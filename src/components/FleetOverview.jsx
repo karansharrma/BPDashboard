@@ -19,7 +19,7 @@ const PlaceholderIcon2 = () => (
 
 const FleetOverview = () => (
   <>
-    <div className="font-sans p-2 bg-white">
+    <div className="font-sans p-2 bg-white w-screen">
       <h2 className="text-xl font-semibold text-center  text-gray-700">
         Fleet Profile
       </h2>

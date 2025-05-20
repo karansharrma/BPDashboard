@@ -19,7 +19,7 @@ const LABELS = [
 
 function PieChartComponent() {
   return (
-    <div className="border border-amber-100 bg-amber-50 rounded-lg shadow-lg pt-6 px-6 pb-4 hover:shadow-2xl transition-shadow duration-300 overflow-hidden mx-auto w-fit">
+    <div className="border border-amber-100 bg-amber-50 h-[400px] rounded-lg shadow-lg pt-6 h-[600] px-6 pb-4 hover:shadow-2xl transition-shadow duration-300 overflow-hidden mx-auto w-fit">
       <div className="flex justify-between items-center mb-4">
         <h3 className="text-lg font-semibold text-gray-700">Cost Breakdown</h3>
         <span className="text-xs text-gray-500 border px-2 py-1 rounded">

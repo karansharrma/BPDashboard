@@ -38,9 +38,9 @@ const TrendingRepairCostChart = () => {
   ];
 
   let labels = ["(Blank)"];
-  labels = labels.concat(monthAbbreviations.slice(3)); // 2016 (Apr-Dec)
-  labels = labels.concat(monthAbbreviations); // 2017 (Jan-Dec)
-  labels = labels.concat(monthAbbreviations); // 2018 (Jan-Dec)
+  labels = labels.concat(monthAbbreviations.slice(3));
+  labels = labels.concat(monthAbbreviations);
+  labels = labels.concat(monthAbbreviations);
   labels = labels.concat(monthAbbreviations.slice(0, 2));
 
   let dataPoints = [52];
