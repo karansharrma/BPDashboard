@@ -20,7 +20,7 @@ const iconMap = {
   "Truck Repair": <FaWrench />,
   "Annual Budget": <FaFileInvoiceDollar />,
   Maintenance: <FaClipboardList />,
-  "Fleet Profile": <Truck />, // Lucide icon
+  "Fleet Profile": <Truck />,
 };
 
 const defaultIcon = <FaQuestionCircle />;

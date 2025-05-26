@@ -44,6 +44,8 @@ export const GoogleSheetProvider = ({ children }) => {
 
   useEffect(() => {
     fetchData();
+    const interval = setInterval(fetchData, 3000);
+    return () => clearInterval(interval);
   }, [fetchData]);
 
   return (

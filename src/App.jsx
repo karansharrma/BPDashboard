@@ -10,6 +10,7 @@ import SafetyOfTrucks from "./components/SafetyOfTrucks";
 import Dashboard from "./components/DashBoard";
 import DashboardLayout from "./DashBoardLayout";
 import FleetOverview from "./components/FleetOverview";
+import Odometer from "./chartcomponents/Odometer";
 
 function App() {
   return (

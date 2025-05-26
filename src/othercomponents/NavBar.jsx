@@ -41,7 +41,7 @@ const Navbar = ({ onToggleSidebar }) => {
         </h1>
       </div>
 
-      <div>
+      {/* <div>
         <button
           onClick={refresh} // 👈 Call real fetch function
           style={{
@@ -68,7 +68,7 @@ const Navbar = ({ onToggleSidebar }) => {
           />
           {isLoading ? "Loading..." : "Load from Sheets"}
         </button>
-      </div>
+      </div> */}
     </nav>
   );
 };

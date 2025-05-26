@@ -3,6 +3,7 @@ import { useGoogleSheet } from "../context/GoogleSheetContext";
 import GaugeChartComponent from "../chartcomponents/GaugeChart";
 import PieChartComponent from "../chartcomponents/PieChartComponent";
 import BarChartComponent from "../chartcomponents/BarChartComponent";
+import Odometer from "../chartcomponents/Odometer";
 
 const pieChartData = [
   { name: "Rent", value: 500 },
@@ -42,8 +43,11 @@ const Dashboard = () => {
           heading="Monthly Expenses"
           dateRange="April 1 - April 30, 2025"
         />
+
         <BarChartComponent />
       </div>
+
+      <Odometer value={5000} title="Dummy Odometer hai" />
     </div>
   );
 };
