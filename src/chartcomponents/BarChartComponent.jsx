@@ -102,16 +102,16 @@ const COLOR_NUM_TASKS = "#000000";
 const COLOR_TOTAL_AVG_DURATION = "#4338ca";
 
 const CustomDash = (props) => {
-  const { cx, cy, fill } = props; // cx, cy are center of the symbol, fill is series color
-  const dashWidth = 15; // Width of the dash
-  const dashHeight = 3; // Thickness of the dash
+  const { cx, cy, fill } = props;
+  const dashWidth = 15;
+  const dashHeight = 3;
   return (
     <rect
       x={cx - dashWidth / 2}
       y={cy - dashHeight / 2}
       width={dashWidth}
       height={dashHeight}
-      fill={fill} // Use the fill color passed by Recharts from the Scatter component
+      fill={fill}
     />
   );
 };
@@ -129,8 +129,6 @@ function BarChartComponent() {
         </span>
       </div>
 
-      {/* Chart Area */}
-      {/* Using ResponsiveContainer for better adaptability */}
       <div style={{ width: "100%", height: 450 }}>
         {" "}
         {/* Increased height slightly */}

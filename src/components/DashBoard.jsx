@@ -47,7 +47,7 @@ const Dashboard = () => {
         <BarChartComponent />
       </div>
 
-      <Odometer value={5000} title="Dummy Odometer hai" />
+      <Odometer value={5000} title="Dummy Odometer" />
     </div>
   );
 };

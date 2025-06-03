@@ -1,1 +1,16 @@
 @import "tailwindcss";
+@keyframes shine {
+  0% {
+    text-shadow: 0 0 0px #00ffcc;
+  }
+  50% {
+    text-shadow: 0 0 8px #00ffcc, 0 0 12px #00ffcc;
+  }
+  100% {
+    text-shadow: 0 0 0px #00ffcc;
+  }
+}
+
+.animate-shine {
+  animation: shine 1s ease-in-out;
+}
