@@ -22,7 +22,7 @@ function App() {
           <Route path="trailer" element={<AllTrailers />} />
           <Route path="AnnualBudget" element={<AnnualBudget />} />
           <Route path="Expiry" element={<Expiry />} />
-          <Route path="Repair" element={<Repair />} />
+          {/* <Route path="Repair" element={<Repair />} /> */}
           <Route path="maintenance" element={<SafetyOfTrucks />} />
           <Route path="fleetProfile" element={<FleetOverview />} />
 

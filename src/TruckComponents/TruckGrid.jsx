@@ -8,6 +8,7 @@ import {
   AlertTriangle,
   XCircle,
 } from "lucide-react";
+import { sampleTruckData } from "../data/sampleTruckdata";
 
 const TruckGrid = ({ trucks }) => {
   const getStatusColor = (status) => {

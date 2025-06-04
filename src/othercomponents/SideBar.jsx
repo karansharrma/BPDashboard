@@ -40,7 +40,7 @@ const Sidebar = ({ isOpen }) => {
     { name: "Vehicles", path: "/vehicles" },
     { name: "All Trailers", path: "/trailer" },
     { name: "Truck Expiries", path: "/Expiry" },
-    { name: "Truck Repair", path: "/Repair" },
+    // { name: "Truck Repair", path: "/Repair" },
     { name: "Maintenance", path: "/maintenance" },
     { name: "Annual Budget", path: "/AnnualBudget" },
     { name: "Fleet Profile", path: "/fleetProfile" },

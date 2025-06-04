@@ -23,8 +23,6 @@ const AllTrucks = ({ trucks = [] }) => {
   const [statusFilter, setStatusFilter] = useState("All");
   const [sortBy, setSortBy] = useState("id");
   const [isRefreshing, setIsRefreshing] = useState(false);
-
-  // Enhanced sample data with more realistic information
   const defaultTrucks = [
     {
       id: "TRK-001",
@@ -111,6 +109,7 @@ const AllTrucks = ({ trucks = [] }) => {
       batteryHealth: 89,
     },
   ];
+  // Enhanced sample data with more realistic information
 
   const trucksData = trucks.length > 0 ? trucks : defaultTrucks;
 
@@ -130,7 +129,7 @@ const AllTrucks = ({ trucks = [] }) => {
         setAnimatedTrucks((prev) => [...prev, truck]);
       }, index * 150);
     });
-  }, [trucksData, searchTerm, statusFilter, sortBy]);
+  }, []);
 
   const getFilteredTrucks = () => {
     let filtered = trucksData.filter(
@@ -326,7 +325,7 @@ const AllTrucks = ({ trucks = [] }) => {
             </div>
           </div>
         </div>
-        <TruckGrid trucks={defaultTrucks} />
+        <TruckGrid trucks={trucksData} />
       </div>
 
       {/* Enhanced Trucks Grid */}

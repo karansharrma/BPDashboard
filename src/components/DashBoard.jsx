@@ -4,6 +4,7 @@ import GaugeChartComponent from "../chartcomponents/GaugeChart";
 import PieChartComponent from "../chartcomponents/PieChartComponent";
 import BarChartComponent from "../chartcomponents/BarChartComponent";
 import Odometer from "../chartcomponents/Odometer";
+import TruckGrid from "../TruckComponents/TruckGrid";
 
 const pieChartData = [
   { name: "Rent", value: 500 },
